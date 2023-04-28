@@ -1,0 +1,204 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+}
+
+.container {
+    margin: 0 auto;
+    margin-top: 20px;
+    max-width: 500px;
+    height: 150vh;
+    display: none;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.spanBlock {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+span {
+    text-align: center;
+}
+
+/* main {
+    background-color: royalblue;
+} */
+
+form {
+    /* margin-top: 3px; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.inputBlock {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.inputColumnOne {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.inputColumnTwo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+form input {
+    width: 220px;
+    height: 48px;
+    font-size: 22px;
+    border-radius: 5px;
+    border: 2px solid black;
+    padding: 2px 10px;
+}
+
+
+.inputArea {
+    display: flex;
+    gap: 3px;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+}
+
+.save {
+    margin-top: 20px;
+    width: 200px;
+    height: 45px;
+    font-size: 15px;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+    background-color: #4200FF;
+}
+
+.essential {
+    color: #4200FF;
+}
+
+.fill {
+    font-size: 12px;
+    color: gray;
+}
+
+.redWarn {
+    color: #EE0004;
+}
+
+.start {
+    display: block;
+    margin-top: 250px;
+    width: 160px;
+    height: 40px;
+    border: 1px solid black;
+    border-radius: 8px;
+    font-size: 18px;
+    color: white;
+    cursor: pointer;
+    background-color: rgb(48, 48, 240);
+}
+
+.theBall {
+    /* margin-top: 230px; */
+    width: 130px;
+    height: 100px;
+    border-radius: 100%;
+    background-color: red;
+    position: fixed;
+    display: none;
+    animation: balloons 5s ease;
+}
+
+
+@keyframes balloons {
+    0% {
+        background-color: green;
+        top: 10%;
+    }
+
+    25% {
+        background-color: black;
+        border-radius: 5%;
+        top: 0%;
+    }
+
+    50% {
+        background-color: orange;
+        border-radius: 100%;
+        top: 50%;
+    }
+
+    75% {
+        background-color: aqua;
+        border-radius: 5%;
+        top: 80%;
+    }
+
+    100% {
+        background-color: pink;
+        border-radius: 100%;
+        top: 110%;
+    }
+}
+
+.inputArea::after {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-image: url(../PICTURES/326633_error_icon.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 41%;
+    left: 230px;
+    opacity: 0;
+    transition: .5 ease;
+}
+
+.inputAreaError::after {
+    opacity: 1;
+}
+
+.inputAreaError span, .inputAreaError h4 {
+    color: red;
+}
+
+.inputAreaError span {
+    font-size: 18px;
+}
+
+.inputAreaError input {
+    border-color: red;
+}
